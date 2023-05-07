@@ -32,6 +32,17 @@ get 'admin/users/:id/edit' => 'admin/users#edit', as: :admin_users_edit
 patch '/admin/users/:id' => 'admin/users#update', as: :admin_users_update
 delete '/admin/users/:id' => 'admin/users#destroy'
 
+#サウナ情報
+patch '/admin/saunas/:id' => 'admin/saunas#update', as: :admin_saunas_update
+get '/admin/saunas' => 'admin/saunas#index'
+get '/admin/saunas/new' => 'admin/saunas#new', as: :admin_saunas_new
+post '/admin/saunas' => 'admin/saunas#create', as: :admin_saunas_create
+get '/admin/saunas/:id' => 'admin/saunas#show', as: :admin_saunas_show
+get '/admin/saunas/:id/edit' => 'admin/saunas#edit', as: :admin_saunas_edit
+delete '/admin/saunas/:id' => 'admin/saunas#destroy', as: :admin_saunas_destroy
+get '/admin/saunas/search' => 'admin/saunas#search'
+get '/admin/saunas/result' => 'admin/saunas#result'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
